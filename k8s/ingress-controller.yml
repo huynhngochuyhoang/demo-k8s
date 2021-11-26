@@ -17,7 +17,7 @@ spec:
             service:
               name: client
               port: 
-                number: 80
+                number: 4200
         - pathType: Prefix
           path: "/fib/?(.*)"
           backend:

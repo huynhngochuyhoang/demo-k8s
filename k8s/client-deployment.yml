@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: client-container
-        image: huynhngochuyhoang/demo-k8s-frontend:v1.0
+        image: huynhngochuyhoang/demo-k8s-frontend
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 4200
