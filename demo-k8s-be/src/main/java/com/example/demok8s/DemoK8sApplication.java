@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 @SpringBootApplication
 @RestController
+@RequestMapping("/api")
 public class DemoK8sApplication {
 
     public static void main(String[] args) {

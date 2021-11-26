@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  selector:
+    matchLabels:
+      app: client-pod
+  template:
+    metadata:
+      labels:
+        app: client-pod
+    spec:
+      containers:
+      - name: client-container
+        image: huynhngochuyhoang/demo-k8s-frontend:v1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

@@ -1,10 +1,10 @@
 version: '3'
 services:
   server:
-      image: huynhngochuyhoang/demo-k8s-server
+      image: huynhngochuyhoang/demo-k8s-server:v1.0
       ports:
         - 8080:8080
-  keycloak:
-    image: huynhngochuyhoang/demo-k8s-frontend
+  client:
+    image: huynhngochuyhoang/demo-k8s-frontend:v1.0
     ports:
       - 80:80

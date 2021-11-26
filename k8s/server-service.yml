@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # Refer to environment.prod.ts in demo-k8s-fe
+  name: server
+spec:
+  type: ClusterIP
+  selector:
+    app: server-pod
+  ports:
+  - port: 8080
+    targetPort: 8080
