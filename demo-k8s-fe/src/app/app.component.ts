@@ -15,8 +15,7 @@ export class AppComponent {
   }
 
   calc() {
-    this.httpClient.get(`${environment.apiUrl}/api/fib/${this.number}`, {responseType: 'text'})
+    this.httpClient.get(`/api/fib/${this.number}`, {responseType: 'text'})
       .subscribe(value => this.message = value)
   }
-
 }
