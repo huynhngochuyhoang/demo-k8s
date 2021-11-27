@@ -19,7 +19,7 @@ spec:
               port: 
                 number: 4200
         - pathType: Prefix
-          path: "/fib/?(.*)"
+          path: "/api/?(.*)"
           backend:
             service:
               name: server
