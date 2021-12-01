@@ -1,9 +1,14 @@
 pipeline {
   agent any
 
+  environment {
+    GITCOMMIT="${sh(returnStdout: true, script: 'git rev-parse HEAD')}"
+  }
+  
   stages {
     stage('Test') {
       steps {
+        echo "Git commit hash is ${GITCOMMIT}"
         echo 'Test pass'
       }
     }
