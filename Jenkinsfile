@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                withKubeConfig(credentialsId: '<id of credentials>') {
+                withKubeConfig(credentialsId: 'kubeconfigid') {
                     // sh 'curl -LO "https://storage.googleapis.com/kubernetes-release/release/<version-kubectl>/bin/linux/amd64/kubectl"'  
                     // sh 'chmod u+x ./kubectl'
                     sh 'kubectl cluster-info'
